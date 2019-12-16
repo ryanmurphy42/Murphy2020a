@@ -59,7 +59,7 @@ end
 x0 = linspace(0,L,N+1);
 if q_init_condition == 1
     %Uniform initial condition
-    x_current = x_init;
+    x_current = x0;
 elseif q_init_condition ==2
     %Gaussian initial condition
     x_current= fsolve(@(x) function_p1d1_fsolve_initial_positions_gaussian_v1(N,L,gaussian_n,gaussian_sigma,gaussian_mu,x ),x0)';
